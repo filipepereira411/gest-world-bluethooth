@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ligações Remotas Nativas (Personalizado)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        section {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+        .btn-whatsapp { background-color: #25D366; }
+        .btn-skype { background-color: #00AFF0; }
+        input[type="file"] {
+            margin: 10px 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Painel de Acesso e Controlo Remoto</h1>
+    <p>Este painel utiliza apenas tags HTML puras para interagir com o hardware e serviços externos na nuvem.</p>
+
+    <!-- 1. WHATSAPP PERSONALIZADO E CHAMADAS -->
+    <section>
+        <h2>1. Disparar Comunicações Remotas</h2>
+        <p>Abre o seu WhatsApp oficial ou chamadas do sistema diretamente:</p>
+        
+        <!-- Link atualizado com o seu número e o indicativo de Portugal (+351) -->
+        <a href="https://wa.me!" target="_blank" class="btn btn-whatsapp">Abrir Meu WhatsApp</a>
+        <br>
+        <a href="tel:+351928037083" class="btn">Ligar para o Meu Número</a>
+        <br>
+        <a href="sms:+351928037083?body=Alerta%20Remoto" class="btn">Enviar SMS</a>
+    </section>
+
+    <!-- 2. CAPTURA DE HARDWARE (Câmara e Som) -->
+    <section>
+        <h2>2. Acesso Direto às Câmaras e Sensores</h2>
+        <p>Ativa o hardware do dispositivo móvel local ao interagir:</p>
+        
+        <label>Tirar Foto (Câmara Traseira):</label>
+        <input type="file" accept="image/*" capture="environment">
+
+        <label>Tirar Foto Selfie (Câmara Frontal):</label>
+        <input type="file" accept="image/*" capture="user">
+    </section>
+
+    <!-- 3. MONITORIZAÇÃO GLOBAL (Sem IP Local) -->
+    <section>
+        <h2>3. Monitorização Visual Remota (Webcam Pública)</h2>
+        <p>A carregar transmissão em tempo real da rede EarthCam na nuvem (sem usar IPs locais):</p>
+        
+        <!-- Iframe configurado para uma câmara web pública mundial em vez de IP privado -->
+        <iframe src="https://earthcam.com" width="100%" height="400px" style="border: 1px solid #ccc; border-radius: 4px;" allowfullscreen></iframe>
+    </section>
+
+</body>
+</html>
